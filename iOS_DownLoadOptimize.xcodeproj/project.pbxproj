@@ -13,6 +13,10 @@
 		EEB118681DE81A3A0034422B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB118661DE81A3A0034422B /* Main.storyboard */; };
 		EEB1186A1DE81A3A0034422B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB118691DE81A3A0034422B /* Assets.xcassets */; };
 		EEB1186D1DE81A3A0034422B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB1186B1DE81A3A0034422B /* LaunchScreen.storyboard */; };
+		EEB118751DE81E750034422B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB118741DE81E750034422B /* SystemConfiguration.framework */; };
+		EEB118791DE81E8B0034422B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB118781DE81E8B0034422B /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
+		EEB1187B1DE824FD0034422B /* ImageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB1187A1DE824FD0034422B /* ImageStoryboard.storyboard */; settings = {ASSET_TAGS = (); }; };
+		EEB118811DE82D1E0034422B /* UIImageView+SD_WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB118801DE82D1E0034422B /* UIImageView+SD_WebImage.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,12 @@
 		EEB118691DE81A3A0034422B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEB1186C1DE81A3A0034422B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEB1186E1DE81A3A0034422B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEB118741DE81E750034422B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EEB118771DE81E8B0034422B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		EEB118781DE81E8B0034422B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		EEB1187A1DE824FD0034422B /* ImageStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageStoryboard.storyboard; sourceTree = "<group>"; };
+		EEB1187F1DE82D1E0034422B /* UIImageView+SD_WebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SD_WebImage.h"; sourceTree = "<group>"; };
+		EEB118801DE82D1E0034422B /* UIImageView+SD_WebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SD_WebImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB118751DE81E750034422B /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 		EEB118511DE81A3A0034422B = {
 			isa = PBXGroup;
 			children = (
+				EEB118761DE81E8B0034422B /* ThirdAPICheckNet */,
+				EEB118741DE81E750034422B /* SystemConfiguration.framework */,
 				EEB1185C1DE81A3A0034422B /* iOS_DownLoadOptimize */,
 				EEB1185B1DE81A3A0034422B /* Products */,
 			);
@@ -67,6 +80,9 @@
 				EEB1186B1DE81A3A0034422B /* LaunchScreen.storyboard */,
 				EEB1186E1DE81A3A0034422B /* Info.plist */,
 				EEB1185D1DE81A3A0034422B /* Supporting Files */,
+				EEB1187A1DE824FD0034422B /* ImageStoryboard.storyboard */,
+				EEB1187F1DE82D1E0034422B /* UIImageView+SD_WebImage.h */,
+				EEB118801DE82D1E0034422B /* UIImageView+SD_WebImage.m */,
 			);
 			path = iOS_DownLoadOptimize;
 			sourceTree = "<group>";
@@ -77,6 +93,16 @@
 				EEB1185E1DE81A3A0034422B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEB118761DE81E8B0034422B /* ThirdAPICheckNet */ = {
+			isa = PBXGroup;
+			children = (
+				EEB118771DE81E8B0034422B /* Reachability.h */,
+				EEB118781DE81E8B0034422B /* Reachability.m */,
+			);
+			name = ThirdAPICheckNet;
+			path = iOS_DownLoadOptimize/ThirdAPICheckNet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEB1186D1DE81A3A0034422B /* LaunchScreen.storyboard in Resources */,
+				EEB1187B1DE824FD0034422B /* ImageStoryboard.storyboard in Resources */,
 				EEB1186A1DE81A3A0034422B /* Assets.xcassets in Resources */,
 				EEB118681DE81A3A0034422B /* Main.storyboard in Resources */,
 			);
@@ -152,7 +179,9 @@
 			files = (
 				EEB118651DE81A3A0034422B /* ViewController.m in Sources */,
 				EEB118621DE81A3A0034422B /* AppDelegate.m in Sources */,
+				EEB118791DE81E8B0034422B /* Reachability.m in Sources */,
 				EEB1185F1DE81A3A0034422B /* main.m in Sources */,
+				EEB118811DE82D1E0034422B /* UIImageView+SD_WebImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +328,7 @@
 				EEB118731DE81A3A0034422B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

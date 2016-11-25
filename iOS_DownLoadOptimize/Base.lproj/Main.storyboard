@@ -32,16 +32,26 @@
                                     <action selector="clickPauseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8SF-pe-05e"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvT-SO-Gps">
+                                <rect key="frame" x="270" y="235" width="60" height="30"/>
+                                <animations/>
+                                <state key="normal" title="点击进入"/>
+                                <connections>
+                                    <action selector="enterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lIV-BG-MSI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vga-TM-7wQ" firstAttribute="height" secondItem="9D6-Ub-mzY" secondAttribute="height" id="A3g-gS-Z2E"/>
                             <constraint firstItem="vga-TM-7wQ" firstAttribute="width" secondItem="9D6-Ub-mzY" secondAttribute="width" id="BoU-S5-jen"/>
+                            <constraint firstItem="yvT-SO-Gps" firstAttribute="top" secondItem="vga-TM-7wQ" secondAttribute="bottom" constant="50" id="kyw-MQ-I14"/>
                             <constraint firstItem="9D6-Ub-mzY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="kzA-wV-kLp"/>
                             <constraint firstItem="vga-TM-7wQ" firstAttribute="top" secondItem="9D6-Ub-mzY" secondAttribute="bottom" constant="47" id="ptM-PJ-Zff"/>
                             <constraint firstItem="9D6-Ub-mzY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sNu-no-Up2"/>
                             <constraint firstItem="vga-TM-7wQ" firstAttribute="leading" secondItem="9D6-Ub-mzY" secondAttribute="leading" id="tPH-dW-Rwt"/>
+                            <constraint firstItem="yvT-SO-Gps" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uvV-Rt-t1Y"/>
                         </constraints>
                     </view>
                 </viewController>

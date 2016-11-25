@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="h6t-L2-D4u">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Wfn-pz-QaS">
+            <objects>
+                <viewController id="h6t-L2-D4u" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="frM-Ta-jk2"/>
+                        <viewControllerLayoutGuide type="bottom" id="nR1-Sj-c7M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ggj-mY-C8Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6SU-ep-QpT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6SU-ep-QpT" firstAttribute="leading" secondItem="ggj-mY-C8Q" secondAttribute="leading" id="Z64-mP-Jbd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6SU-ep-QpT" secondAttribute="trailing" constant="-20" id="eWs-Cq-nDY"/>
+                            <constraint firstItem="nR1-Sj-c7M" firstAttribute="top" secondItem="6SU-ep-QpT" secondAttribute="bottom" id="k1p-OJ-1WP"/>
+                            <constraint firstItem="6SU-ep-QpT" firstAttribute="centerX" secondItem="ggj-mY-C8Q" secondAttribute="centerX" id="mh5-7F-qUM"/>
+                            <constraint firstItem="6SU-ep-QpT" firstAttribute="top" secondItem="frM-Ta-jk2" secondAttribute="bottom" id="ri7-Kq-dvQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="eWs-Cq-nDY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLH-BI-HG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.5" y="448.5"/>
+        </scene>
+    </scenes>
+</document>

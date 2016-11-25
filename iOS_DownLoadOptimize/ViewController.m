@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "Reachability.h"
 @interface ViewController ()<NSURLSessionDownloadDelegate>
 /**下载任务*/
 @property(nonatomic,strong)NSURLSessionDownloadTask *task;
@@ -15,9 +15,19 @@
 @property(nonatomic,strong)UIActivityIndicatorView *loading;
 /**回复标识（保存当前进度）*/
 @property(nonatomic,strong)NSData *resumeData;
+/** 网络监测类*/
+@property(nonatomic,strong)Reachability *reach;
 @end
 
 @implementation ViewController
+
+//懒加载
+-(Reachability *)reach{
+    if (_reach  == nil) {
+        _reach = [Reachability reachabilityForInternetConnection];
+    }
+    return _reach;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,10 +35,29 @@
     self.loading = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2, 20, 10, 10)];
     self.loading.color = [UIColor redColor];
     [self.view addSubview:self.loading];
+    //注册通知，进行网络监测
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(monitorNet) name:kReachabilityChangedNotification object:nil];
+    [self.reach startNotifier];
+}
+
+#pragma mark - 网络监测
+-(void)monitorNet{
+    //初始化一个网络监测类
+    if (self.reach.currentReachabilityStatus == NotReachable) {
+        //此时没有网络
+        NSLog(@"没有网络");
+    }else if(self.reach.currentReachabilityStatus == ReachableViaWiFi){
+        NSLog(@"WIFI链接");
+    }else{
+        NSLog(@"您正在使用2g/3g/4g");
+    }
 }
 
 #pragma mark -开始下载
 - (IBAction)clickStartBtn:(UIButton *)sender {
+    //首先监测网络
+    [self monitorNet];
+    
     //开始UIActivityIndicatorView动画
     [self.loading startAnimating];
     
@@ -101,6 +130,22 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite{
     }
     //打印进度
     NSLog(@"%g",process);
+}
+
+//移除通知
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kReachabilityChangedNotification object:nil];
+}
+
+#pragma mark - 切换storyboard
+- (IBAction)enterAction:(UIButton *)sender {
+    //实例化Storyboard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ImageStoryboard" bundle:nil];
+    //取出storyboard的控制器
+    UIViewController *vc  = [storyboard instantiateInitialViewController];
+    //获取窗口实例(单例)
+   UIWindow *win =  [UIApplication sharedApplication].keyWindow;
+    win.rootViewController = vc;
 }
 
 
