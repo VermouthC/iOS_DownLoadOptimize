@@ -4,7 +4,7 @@
 //
 //  Created by MasterChen on 16/11/25.
 //  Copyright © 2016年 MasterChen. All rights reserved.
-//
+//  检测
 
 #import "ViewController.h"
 #import "Reachability.h"
